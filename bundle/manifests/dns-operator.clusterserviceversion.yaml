@@ -58,14 +58,14 @@ metadata:
       ]
     capabilities: Basic Install
     categories: Integration & Delivery
-    containerImage: quay.io/kuadrant/dns-operator:latest
-    createdAt: "2025-10-30T11:50:44Z"
+    containerImage: quay.io/kuadrant/dns-operator:v0.6.0
+    createdAt: "2026-04-07T16:41:23Z"
     description: A Kubernetes Operator to manage the lifecycle of DNS resources
     operators.operatorframework.io/builder: operator-sdk-v1.33.0
     operators.operatorframework.io/project_layout: go.kubebuilder.io/v4
     repository: https://github.com/kuadrant/dns-operator
     support: kuadrant
-  name: dns-operator.v0.0.0
+  name: dns-operator.v0.6.0
   namespace: placeholder
 spec:
   apiservicedefinitions: {}
@@ -198,7 +198,7 @@ spec:
                 envFrom:
                 - configMapRef:
                     name: dns-operator-controller-env
-                image: quay.io/kuadrant/dns-operator:latest
+                image: quay.io/kuadrant/dns-operator:v0.6.0
                 livenessProbe:
                   httpGet:
                     path: /healthz
@@ -292,4 +292,4 @@ spec:
   minKubeVersion: 1.8.0
   provider:
     name: Red Hat
-  version: 0.0.0
+  version: 0.6.0
